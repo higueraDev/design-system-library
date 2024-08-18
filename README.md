@@ -1,27 +1,123 @@
-# DesignSystemLibrary
+# Design System Library Documentation
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
+## Table of Contents
 
-## Development server
+1. [Introduction](#introduction)
+2. [Project Goals](#project-goals)
+3. [Technologies Used](#technologies-used)
+4. [Component Guidelines](#component-guidelines)
+   - [Naming Conventions](#naming-conventions)
+   - [Folder Structure](#folder-structure)
+   - [Component Architecture](#component-architecture)
+5. [Design Principles](#design-principles)
+   - [Accessibility](#accessibility)
+   - [Responsiveness](#responsiveness)
+   - [Theming](#theming)
+6. [Storybook Documentation](#storybook-documentation)
+7. [Testing and Quality Assurance](#testing-and-quality-assurance)
+8. [How to Contribute](#how-to-contribute)
+9. [Getting Started](#getting-started)
+10. [Future Enhancements](#future-enhancements)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 1. Introduction
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The **Design System Library** is a collection of reusable, customizable UI components built with Angular and documented using Storybook. This library is designed to provide a consistent, accessible, and scalable foundation for building web applications.
 
-## Build
+## 2. Project Goals
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Consistency**: Ensure a uniform look and feel across all UI components used in the application.
+- **Reusability**: Create modular components that can be easily reused across different parts of an application.
+- **Accessibility**: Adhere to WCAG standards to make components accessible to all users, including those with disabilities.
+- **Scalability**: Design components that are flexible and scalable to meet the growing needs of any project.
+- **Customization**: Allow for easy theming and customization to adapt the design system to various branding requirements.
 
-## Running unit tests
+## 3. Technologies Used
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Angular**: The core framework used for building the UI components.
+- **Storybook**: A tool for documenting, testing, and showcasing the components in isolation.
+- **SCSS**: A CSS preprocessor used for writing organized, reusable, and maintainable styles.
+- **Jasmine & Karma**: Testing frameworks used for unit testing the components.
+- **TypeScript**: A typed superset of JavaScript that enhances the development experience and code maintainability.
 
-## Running end-to-end tests
+## 4. Component Guidelines
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Naming Conventions
 
-## Further help
+- **Component Names**: Use PascalCase for component names (e.g., `ButtonComponent`).
+- **File Names**: Use kebab-case for file names (e.g., `button.component.ts`).
+- **Selectors**: Use `app-` as the prefix for component selectors (e.g., `<app-button>`).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Folder Structure
+
+Organize components in a structured manner for better maintainability:
+
+src/
+└── app/
+├── components/
+│ ├── button/
+│ │ ├── button.component.ts
+│ │ ├── button.component.html
+│ │ ├── button.component.scss
+│ │ └── button.stories.ts
+│ ├── form/
+│ ├── modal/
+│ └── card/
+└── shared/
+└── services/
+
+### Component Architecture
+
+Each component should be:
+
+- **Self-Contained**: Encapsulate all HTML, CSS, and logic within the component.
+- **Configurable**: Provide input properties to customize the component’s behavior and appearance.
+- **Documented**: Document each component’s usage, API, and variations in Storybook.
+
+## 5. Design Principles
+
+### Accessibility
+
+- **ARIA Attributes**: Incorporate ARIA attributes to enhance accessibility.
+- **Keyboard Navigation**: Ensure components are fully navigable via keyboard.
+- **Color Contrast**: Adhere to WCAG guidelines for color contrast to ensure readability.
+
+### Responsiveness
+
+- **Mobile-First Design**: Design components to be responsive, starting with mobile devices and scaling up.
+- **Media Queries**: Use media queries to adjust styles for different screen sizes.
+
+### Theming
+
+- **CSS Variables**: Use CSS variables for theming, allowing easy customization of colors, fonts, and other design elements.
+- **Dark Mode Support**: Provide built-in support for light and dark themes.
+
+## 6. Storybook Documentation
+
+- **Component Stories**: Document each component in Storybook with interactive examples.
+- **Knobs/Add-ons**: Use Storybook knobs and add-ons to allow real-time manipulation of component properties.
+- **Usage Instructions**: Provide detailed instructions on how to use each component, including code snippets.
+
+## 7. Testing and Quality Assurance
+
+- **Unit Tests**: Write unit tests for each component using Jasmine and Karma to ensure reliability and prevent regressions.
+- **Accessibility Tests**: Use automated tools like Axe to test and validate the accessibility of components.
+- **Visual Regression Testing**: Consider implementing visual regression testing to catch unintended visual changes.
+
+## 8. How to Contribute
+
+- **Fork the Repository**: Start by forking the repository on GitHub.
+- **Create a New Branch**: Create a new branch for your feature or bugfix.
+- **Submit a Pull Request**: Once your work is complete, submit a pull request with a detailed description of the changes.
+- **Code Reviews**: All contributions will undergo code review to ensure they meet project standards.
+
+## 9. Getting Started
+
+### Prerequisites
+
+- **Node.js & npm**: Ensure you have Node.js and npm installed.
+- **Angular CLI**: Install the Angular CLI globally:
+  ```bash
+  npm install -g @angular/cli
+  ```
